@@ -1,0 +1,284 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		91E1FD551ED39C57003F73C5 /* Audio360FfmpegDecoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91E1FD4F1ED39C57003F73C5 /* Audio360FfmpegDecoder.cpp */; };
+		91E1FD561ED39C57003F73C5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 91E1FD541ED39C57003F73C5 /* main.cpp */; };
+		91E1FD581ED3A810003F73C5 /* libAudio360.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 91E1FD571ED3A810003F73C5 /* libAudio360.dylib */; };
+		91E1FD591ED3A815003F73C5 /* libAudio360.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 91E1FD571ED3A810003F73C5 /* libAudio360.dylib */; };
+		91E1FD5B1ED3A874003F73C5 /* HansVoice_FB360_H264_Opus.mkv in CopyFiles */ = {isa = PBXBuildFile; fileRef = 91E1FD5A1ED3A874003F73C5 /* HansVoice_FB360_H264_Opus.mkv */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		91E1FD3B1ED39C18003F73C5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				91E1FD591ED3A815003F73C5 /* libAudio360.dylib in CopyFiles */,
+				91E1FD5B1ED3A874003F73C5 /* HansVoice_FB360_H264_Opus.mkv in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		91E1FD3D1ED39C18003F73C5 /* FFmpegDecoder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = FFmpegDecoder; sourceTree = BUILT_PRODUCTS_DIR; };
+		91E1FD4F1ED39C57003F73C5 /* Audio360FfmpegDecoder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Audio360FfmpegDecoder.cpp; path = ../Audio360FfmpegDecoder.cpp; sourceTree = SOURCE_ROOT; };
+		91E1FD501ED39C57003F73C5 /* Audio360FfmpegDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Audio360FfmpegDecoder.h; path = ../Audio360FfmpegDecoder.h; sourceTree = SOURCE_ROOT; };
+		91E1FD521ED39C57003F73C5 /* LibFfmpeg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibFfmpeg.h; path = ../LibFfmpeg.h; sourceTree = SOURCE_ROOT; };
+		91E1FD531ED39C57003F73C5 /* LibLoader.hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LibLoader.hh; path = ../LibLoader.hh; sourceTree = SOURCE_ROOT; };
+		91E1FD541ED39C57003F73C5 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = ../main.cpp; sourceTree = SOURCE_ROOT; };
+		91E1FD571ED3A810003F73C5 /* libAudio360.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libAudio360.dylib; path = ../../../Audio360/macOS/libAudio360.dylib; sourceTree = SOURCE_ROOT; };
+		91E1FD5A1ED3A874003F73C5 /* HansVoice_FB360_H264_Opus.mkv */ = {isa = PBXFileReference; lastKnownFileType = file; name = HansVoice_FB360_H264_Opus.mkv; path = ../Media/HansVoice_FB360_H264_Opus.mkv; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		91E1FD3A1ED39C18003F73C5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91E1FD581ED3A810003F73C5 /* libAudio360.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		91E1FD341ED39C18003F73C5 = {
+			isa = PBXGroup;
+			children = (
+				91E1FD5A1ED3A874003F73C5 /* HansVoice_FB360_H264_Opus.mkv */,
+				91E1FD571ED3A810003F73C5 /* libAudio360.dylib */,
+				91E1FD3F1ED39C18003F73C5 /* FFmpegDecoder */,
+				91E1FD3E1ED39C18003F73C5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		91E1FD3E1ED39C18003F73C5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				91E1FD3D1ED39C18003F73C5 /* FFmpegDecoder */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		91E1FD3F1ED39C18003F73C5 /* FFmpegDecoder */ = {
+			isa = PBXGroup;
+			children = (
+				91E1FD4F1ED39C57003F73C5 /* Audio360FfmpegDecoder.cpp */,
+				91E1FD501ED39C57003F73C5 /* Audio360FfmpegDecoder.h */,
+				91E1FD521ED39C57003F73C5 /* LibFfmpeg.h */,
+				91E1FD531ED39C57003F73C5 /* LibLoader.h */,
+				91E1FD541ED39C57003F73C5 /* main.cpp */,
+			);
+			path = FFmpegDecoder;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		91E1FD3C1ED39C18003F73C5 /* FFmpegDecoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91E1FD441ED39C18003F73C5 /* Build configuration list for PBXNativeTarget "FFmpegDecoder" */;
+			buildPhases = (
+				91E1FD391ED39C18003F73C5 /* Sources */,
+				91E1FD3A1ED39C18003F73C5 /* Frameworks */,
+				91E1FD3B1ED39C18003F73C5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FFmpegDecoder;
+			productName = FFmpegDecoder;
+			productReference = 91E1FD3D1ED39C18003F73C5 /* FFmpegDecoder */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		91E1FD351ED39C18003F73C5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Two Big Ears";
+				TargetAttributes = {
+					91E1FD3C1ED39C18003F73C5 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 91E1FD381ED39C18003F73C5 /* Build configuration list for PBXProject "FFmpegDecoder" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 91E1FD341ED39C18003F73C5;
+			productRefGroup = 91E1FD3E1ED39C18003F73C5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91E1FD3C1ED39C18003F73C5 /* FFmpegDecoder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		91E1FD391ED39C18003F73C5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				91E1FD561ED39C57003F73C5 /* main.cpp in Sources */,
+				91E1FD551ED39C57003F73C5 /* Audio360FfmpegDecoder.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		91E1FD421ED39C18003F73C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		91E1FD431ED39C18003F73C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		91E1FD451ED39C18003F73C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Audio360/macOS";
+				OTHER_LDFLAGS = "-lAudio360";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/include;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Audio360/include";
+			};
+			name = Debug;
+		};
+		91E1FD461ED39C18003F73C5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				LIBRARY_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Audio360/macOS";
+				OTHER_LDFLAGS = "-lAudio360";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SYSTEM_HEADER_SEARCH_PATHS = /usr/local/include;
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/../../../Audio360/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		91E1FD381ED39C18003F73C5 /* Build configuration list for PBXProject "FFmpegDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91E1FD421ED39C18003F73C5 /* Debug */,
+				91E1FD431ED39C18003F73C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91E1FD441ED39C18003F73C5 /* Build configuration list for PBXNativeTarget "FFmpegDecoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				91E1FD451ED39C18003F73C5 /* Debug */,
+				91E1FD461ED39C18003F73C5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 91E1FD351ED39C18003F73C5 /* Project object */;
+}

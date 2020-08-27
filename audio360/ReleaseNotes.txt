@@ -1,0 +1,169 @@
+Audio360 AudioEngine Release Notes
+==================================
+
+1.7.12 (18 Dec 2019)
+----------------------------
+
+Added: Post-build script to copy iOS libraries for simulator or device, depending on target
+
+1.7.3 (08 August 2019)
+----------------------------
+
+~~ Breaking Changes in Unity ~~
+1. The script TBE.AudioEngineSettings has been removed. Remove any `[TBE.AudioEngineSettings]` prefabs or GameObjects. Any script instances of `TBE.AudioEngineSettings` will no longer be found
+2. The setup script has been changed. Select "Edit -> FB Audio -> Setup" from the menu bar. Click on the "Setup" button in the resulting window to create a new setup object that will ensure that the engine is initialized correctly
+3. The iOS library is now a .framework and not a static library. You might need to manually delete the older static library (.a) from your project
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+* Added arm64 support for Unity
+* Fixed: background threads might unnecessarily spin on Android
+* New! Unreal Engine plugin upgraded to 4.22.3
+* New! Android support in Unreal Engine
+* New! Source code for the ExoPlayer integration
+
+1.6.0 (31 July 2018)
+----------------------------
+New! Added: 3rd Order Ambisonic support
+New! Added a Javascript implementation of the Audio360 renderer (WWW SDK)
+New! Added real-time pitch/varispeed playback in AudioObject
+New! Added AudioFormatEncoder API
+New! Added: AudioResampler API
+New! AudioObject: Added directionality APIs. Available in C++, Java and Unity
+New! Unity: Added volume in decibels API
+New! Added "spatialise" toggle in Unity integration
+New! Added: PLAY_STATE_CHANGED event
+Fixed: Fixed crash when loading a 32 bit wav file and when loading an incompatible format in AudioObject
+Fixed: Unity: Fixed issue where an object might be created without properties applied
+Fixed: Unity: AOT exception on iOS causing no audio to be heard
+Fixed: Threading/performance issue on Android
+Breaking Change: Removed `void* owner` argument in the event callback method.`void *userData` must be used to pass references to custom data or the owning object.
+Change: Audio360 and ExoPlayer Android integrations now target Android API 15
+Improved: Unity: Added event callback/listener support for iOS and IL2CPP targets
+
+
+1.5.0 (16 May 2018)
+----------------------------
+
+New! (Unreal Engine) Preview release of Unreal Engine integration for macOS and Windows
+New! Added support to rotate an ambisonic mix when using SpatDecoderFile/Queue (also exposed as an option in Unity)
+New! Added support for playing .opus files in AudioObject and SpatDecoderFile. See documentation for more information
+New! Added decode in audio callback option to AudioObject for synchronous processing
+New! Exposed distance attenuation properties in AudioObject
+New! Added native macOS/iOS audio decoder support to playback native OS codecs
+New! Added a method to get the output latency of the audio device
+New! Documentation on supported codecs
+New! Script and documentation to prepare spatial audio assets for streaming (via DASH)
+New! SpeakersVirtualizer class for virtualizer surround audio
+New! AudioEngine::AudioMixCallback for accessing the final mix written to the audio device
+New! AudioObject::BufferCallback to optionally write custom/procedurally generated audio for spatialisation
+New! (ExoPlayer) Added method to get/set the ChannelMap in Audio360Sink
+New! (ExoPlayer) AudioSink can optionally compensate for output latency, improving AV sync
+Updated: Documentation includes information on AudioObject
+Updated: Documentation includes information on Unreal Engine
+Updated: (ExoPlayer) Integration updated to to v2.8.0 of ExoPlayer, updated example
+Updated: (ExoPlayer) Older ExoPlayer versions are no longer supported, use previous versions of the SDK if required
+Fixed: (Unity) Script execution order to avoid cases where objects are used before the engine is initialised
+Fixed: (Unity) Improved event callback support for AudioObject
+Fixed: (Unity) Fix for buffering/crackling on Android
+Fixed: (Unity) Fixed editor singleton errors
+Fixed: (Unity) Runtime exception when using IL2CPP in Unity
+Fixed: Event::DECODER_INIT not being dispatched when a file is resampled
+Fixed: Fixed incorrect elapsed time/sync when assets are resampled
+Fixed: Positional tracking not changing if there's no change in rotation
+Fixed: Noise at the end of certain wav files
+Fixed: SpatDecoderFile silence when closing and reopening files
+Fixed: SpatDecoderFile silence when closing and reopening files
+Fixed: Crash when the number of channels in a file does not match the required channel map
+Fixed: Head-locked channels would go out of sync in some cases
+Fixed: Elapsed time drifts if resampling is applied
+Fixed: Crash when objects exceed the pool
+Fixed: (ExoPlayer) Fixed end of stream not being handled / event not being triggered
+
+1.4.0 (20 December 2017)
+----------------------------
+* New! Sample accurate looping in SpatDecoderFile
+* New! (ExoPlayer) Integrations for v2.6 and v2.5
+* New! (Unity) Easy support for Rift audio device properties
+* New! applyVolumeFade method in SpatDecoderFile to create volume ramps
+* New! Additional builds of .aar Android libraries that are compatible with Unity
+* Improved: Decreased initialisation time by 3x
+* Improved: Efficiency gains if silence is detected
+* Fixed: Stall on Windows when playing back some .tbe files
+* Fixed: (Unity) UI properties do not update during runtime
+* Fixed: Volume is reset when seeking
+* Fixed: Incorrect playback when upsampling certain files
+* Fixed: Race condition on Android when the audio engine is destroyed
+
+1.3.0 (30 August 2017)
+----------------------------
+* New! New renderer. Improved sound quality and upto 3-4x improvement in performance
+* New! Unity integration (preview)
+* Fixed: Rare issue where opening two audio files in succession might result in no audio
+* Fixed: Certain sample rates fail on Windows (regression from 1.2.0)
+
+1.2.1 (14 August 2017)
+----------------------------
+* New! Android Java: new AudioEngine constructor parameter for tuning the decoder queue size
+
+1.2.0 (31 July 2017)
+----------------------------
+* New! SpatDecoderFile resamples audio assets to match the mixer/device rate
+* New! Optionally decode audio in the audio mixer callback when using SpatDecoderFile (default behaviour is to use the decode thread)
+* New! Windows Store/UWP support (for Windows Mixed Reality)
+* New! SpatDecoderFile can open custom streams by extending IOStream
+* New! New AudioFormatDecoder class for decoding .wav/.tbe files and opus packets to PCM
+* New! Open files through an AssetDescriptor
+* New! Event callback for SpatDecoderFile and SpatDecoderQueue
+* New! Event::END_OF_STREAM event when SpatDecoderFile finishes playing a file
+* New! Event::ERROR_QUEUE_STARVATION event when playback queues in SpatDecoderFile/Queue are starved
+* New! Support for 24 bit wav file playback
+* New! Added builds for Win32
+* New! Support for second order ambiX
+* New! Event callback in Android Java integration
+* New! Specify custom audio device (default behavior is to choose the default device)
+* New! Enumerate all available audio devices
+* New! Example FFmpeg project for decoding FB360 .mkv files with Opus spatial audio
+* New! Optionally disable clock in ExoPlayer audio renderer
+* New! Optionally increase or decrease audio engine latency (useful for bluetooth on Android)
+* New! Experimental support for audio objects
+* New! Experimental C# support
+* Improved: SpatDecoderFile no longer tests for file extensions (Eg: .tbe files don't require a .tbe extension)
+* Improved: iOS simulator and device builds are lipo'd into a single library
+* Improved: SpatDecoderFile attempts to seek in cache, reducing seek time on some platforms
+* Improved: Documentation
+* Improved: CoreAudio/WASAPI support
+* Fixed: Memory leak in Android Java wrapper
+* Fixed: Decoder ready event callback would not be triggered when a file is opened, closed and reopened again
+* Fixed: Crash if getElapsedTimeInSamples is called if the file isn't open
+* Fixed: (Regression) Stalled playback when seeking SpatFile many times
+
+1.1.0 (13 April 2017)
+----------------------------
+* New! Schedule transport and volume events when using SpatDecoderFile and SpatDecoderQueue
+* New! Methods to play with fade in and stop/pause with fade out
+* New! Method for returning DSP time from AudioEngine
+* New! SpatDecoderFile now crossfades when seeking or synchronizing
+* New! Extension for ExoPlayer 1.5.55
+* New! Example project for playback of .tbe files on Android
+* New! Example project ExoPlayer 1.5.55 on Android
+* New! PlatformSettings struct in EngineInitSettings for specifying JNI environment and AAssetManager on Android
+* New! Playback of .tbe files from the Android app's asset folder
+* Improved: WASAPI and CoreAudio support on Windows and macOS
+* Fixed: Stall with playback of some .tbe files on Windows
+* Fixed: SpatDecoderFile would not rewind on stop
+
+1.0.2 (14 March 2017)
+----------------------------
+* New! ExoPlayer 2.0 integration to enable streaming of muxed video files
+* New! Android Java wrapper for the audio engine
+* New! interface for measuring loudness of the main of the mix
+* New! Added Android builds for armv8-64, x86, x86_64
+* SpatDecoderInterface::setFocusProperties is deprecated and now broken up setOffFocusLeveldB and setFocusWidthDegrees
+* Destructors for SpatDecoderQueue and SpatDecoderFile are now (correctly) protected
+* Updated focus algorithm
+
+1.0.0 (30 November 2016)
+----------------------------
+-- Major Update --
+* Rewritten C++ API. C API has been retired
+* Rewritten audio engine with improved performance and multithreading performance
