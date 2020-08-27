@@ -2,13 +2,10 @@
 One fairly well-qualified enthusiast's journey of analysis and discovery through the myriad of spatial/3D/binaural audio solutions currently available, and their attempts to rank them with various metrics of goodness. Inspired by the overwhelming choice of vendors all claiming to do the exact same thing, motivated by the underwhelming results of everything I've seen and heard so far (so expect razor-sharp criticism and perhaps a little sarcasm).
 
 # Rules
-* All installing, building and experiments have been done on my HP Probook G6 w/ Ubuntu 20.04 (unless stated otherwise). If I hit a blocker because of this, then I may reluctantly move over to my Windows 10 install on same machine
-* Whilst platform compatibility, wrappers and applied example scenarios are noted and appreciated - when it comes to judging the solution itself, only the core SDK/engine in its native language will be considered. I don't care that your software runs in Unity 5.4.03.30.g5.patch2017 with minimal effort or can render in real-time on your dog's dumbphone, if it sounds sh\*t on my ATH-40x headphones on my dev laptop with simple demo code that I've written with your SDK and documentation, and performs badly on reasonable spectral and listening tests, then that's down to the fundamental maths/physics/DSP gubbins in your "solution".
-I may rethink this mindset once I start sifting through the mountain below.
 
 # Contenders
 * Google Resonance Audio https://resonance-audio.github.io/resonance-audio/
-* Audio360 (by Facebook) https://facebookincubator.github.io/facebook-360-spatial-workstation/#
+* Facebook 360 Spatial Workstation powered by Audio360 https://facebookincubator.github.io/facebook-360-spatial-workstation/#
 * Steam Audio https://valvesoftware.github.io/steam-audio/
 * IEM Plug-in Suite https://plugins.iem.at/
 * Audio Ease 360pan Suite https://www.audioease.com/360/
@@ -34,3 +31,9 @@ https://resonance-audio.github.io/resonance-audio/ - The landing page is nice an
 
 ## Experiments
 With no example app code in the core library and API docs a little on the thin side, I have to dig around a fair bit in order to get a starting point for building a very simple mono --> binaural app. In fact, I can't find anything _at all_ that doesn't require me also using Unity, FMOD, JavaScript etc. - so I'm giving up for now and moving on.
+
+# Contender 2: Facebook 360 Spatial Workstation powered by Audio360
+Yes, let's hope using this isn't as daunting as the name.
+
+## Building
+I download the most recent version of the Rendering SDK from here https://facebook360.fb.com/downloads/27514-2/ (a hefty 356MB, curious to know what the hell is in here)
