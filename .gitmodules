@@ -1,0 +1,3 @@
+[submodule "resonance"]
+	path = resonance
+	url = https://github.com/resonance-audio/resonance-audio.git
