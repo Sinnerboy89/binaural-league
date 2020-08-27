@@ -1,6 +1,3 @@
-# binaural-league
-One fairly well-qualified enthusiast's journey of analysis and discovery through the myriad of spatial/3D/binaural audio solutions currently available, and their attempts to rank them with various metrics of goodness. Inspired by the overwhelming choice of vendors all claiming to do the exact same thing, motivated by the underwhelming results of everything I've seen and heard so far (so expect razor-sharp criticism and perhaps a little sarcasm).
-
 # The Game
 I'm going to attempt to build and test a VST plugin with each solution _as close to the source as possible_. Whilst the open-sourcedness of the solution isn't a major factor in scoring, it does help me understand what's happening under the hood. If I can't build the plugin myself, I'll test what they give me. Imma do all this on Windows 10 x64 and VS, like the rapscallion I am.
 
