@@ -23,6 +23,7 @@ I'm going to attempt to build and test a VST plugin with each solution _as close
 
 # Contender 1: Google Resonance Audio
 There's a paper, hooray: https://www.aes.org/e-lib/browse.cfm?elib=20446
+
 The source code is INCREDIBLY well organised and documented. I can read it like a book, and supplemented by the paper there's not a lot of mystery here, which is great.
 
 ## Building
