@@ -23,9 +23,11 @@ I'm going to attempt to build and test a VST plugin with each solution _as close
 
 # Contender 1: Google Resonance Audio
 There's a paper, hooray: https://www.aes.org/e-lib/browse.cfm?elib=20446
+The source code is INCREDIBLY well organised and documented. I can read it like a book, and supplemented by the paper there's not a lot of mystery here, which is great.
 
 ## Building
 https://resonance-audio.github.io/resonance-audio/ - The landing page is nice and clear, but the "Getting Started" section only shows examples for common platforms or middleware, and it's actually quite difficult to navigate to the source repo from here. Once there though (https://github.com/resonance-audio/resonance-audio, or alternatively click the submodule in this repo) the SDK build instructions look fairly straightforward - oh, but wait - when I try the third-party cloning script, it tries to grab repos that no longer exist. Fixed promptly here https://github.com/resonance-audio/resonance-audio/issues/37. SDK build and testing runs fine, apart from a hidden dependency on Ogg Vorbis, which wasn't mentioned in the pre-requisites. The geometrical acoustics unit tests also seem to want "Embree 2", which I'm not gonna touch at this stage, so skipping those.
+Hit a snag whilst attempting to build VST Monitor plugin on Windows - issue submitted here: https://github.com/resonance-audio/resonance-audio/issues/39
 
 ## Experiments
 
