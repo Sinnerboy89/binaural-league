@@ -35,4 +35,4 @@ Hit a snag whilst attempting to build VST Monitor plugin on Windows - issue subm
 Yes, let's hope using this isn't as daunting as the name.
 
 ## Building
-I download the most recent version of the Rendering SDK from here https://facebook360.fb.com/downloads/27514-2/ (a hefty 356MB, curious to know what the hell is in here). Upon inspection, I find it's actually over 1GB - and that's because they've distributed the SDK with every target built already. Why? Because I often find myself looking for .dylibs and Unreal Engine plugin binaries for Android on my Windows machine just to, y'know see how they're doing. Screw hard drives, amirite?
+I download the most recent version of the Rendering SDK from here https://facebook360.fb.com/downloads/27514-2/ (a hefty 356MB, curious to know what the hell is in here). Upon inspection, I find it's actually over 1GB - and that's because they've distributed the SDK with every target built already.
