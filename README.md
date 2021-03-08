@@ -21,6 +21,8 @@ In no particular order:
 16. Auro-3D Engine https://www.auro-3d.com/system/engine/
 17. SPAT Revolution (IRCAM) https://www.flux.audio/project/spat-revolution/
 18. DTS:X https://www.whathifi.com/advice/dtsx-what-it-how-can-you-get-it
+19. 360 Reality Audio https://360ra.com/
+20. dearVR https://www.dearvr.com/
 
 # Contender 1: Google Resonance Audio
 There's a paper, hooray: https://www.aes.org/e-lib/browse.cfm?elib=20446
